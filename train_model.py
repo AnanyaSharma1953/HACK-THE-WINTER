@@ -5,8 +5,9 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 
 # ---------------- Load Kaggle Dataset ----------------
-fake = pd.read_csv("Fake.csv")
-real = pd.read_csv("True.csv")
+fake = pd.read_csv("data/Fake.csv")
+real = pd.read_csv("data/True.csv")
+
 
 fake["label"] = "FAKE"
 real["label"] = "REAL"
@@ -48,3 +49,4 @@ pickle.dump(model, open("model.pkl", "wb"))
 pickle.dump(vectorizer, open("vectorizer.pkl", "wb"))
 
 print("✅ model.pkl & vectorizer.pkl saved")
+
